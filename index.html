@@ -1,6 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <br>
+<img src="https://www.stib-mivb.be/irj/go/km/docs/horaires/1/images/20150629/1.gif" alt=""/>
+<button onclick="Removal()">Remove(for panic button)</button>
+<script>
+  document.addEventListener("keydown", keyDownBody, keyDownRemove, false);
+
+  function keyDownBody(e) {
+    var keyCode = e.keyCode;
+    if(keyCode==65) {
+      myFunction();
+    }
+  }
+
+  function keyDownRemove(d) {
+    var keyCode = d.keyCode;
+    if(keyCode==77) {
+      Removal();
+    }
+  }
+
+
+  
+
+  function myFunction() {
+    var x = document.createElement("IMG");
+    var v = document.createElement("button");
+
+    x.setAttribute("src", "https://www.stib-mivb.be/irj/go/km/docs/horaires/2/images/20150629/2.gif")
+    x.setAttribute("width", "30");
+    x.setAttribute("width", "30");
+    x.setAttribute("alt", "The Pulpit Rock");
+    x.id = 'pizza';
+
+    document.body.insertBefore(x,document.body.firstElementChild);
+  }
+
+  function Removal() {
+  const element = document.getElementById("pizza");
+  element.remove();
+}
+
+</script>
         <style>
         body {
         background-color: lightslategray;
